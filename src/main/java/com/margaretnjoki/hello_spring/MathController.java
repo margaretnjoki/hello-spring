@@ -11,4 +11,11 @@ public class MathController {
     public int power(@PathVariable int base, @PathVariable int exp) {
         return (int) Math.pow(base, exp);
     }
+    @GetMapping("/max")
+    public String max(@RequestParam int a, @RequestParam int b){
+        if (a>b){
+            return "MAX_no = " + "a" ;
+        }
+        return "MAX_no = " + "b" ;
+    }
 }
