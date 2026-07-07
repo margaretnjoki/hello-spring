@@ -27,6 +27,15 @@ public class HelloController {
         return "this app is about learning Spring";
     }
 
+    @GetMapping("/health")
+    public String health(){
+        return "OK";
+    }
+
+//    public String greet(String name){
+//        return ""
+    }
+
 
 
 }
