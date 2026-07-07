@@ -46,6 +46,14 @@ public class HelloController {
         return (a * b);
     }
 
+    @GetMapping("/isEven/{n}")
+    public String isEven( @PathVariable int n){
+        if (n % 2 == 0){
+            return "even";
+        }
+       return "odd";
+    }
+
 
 
 }
