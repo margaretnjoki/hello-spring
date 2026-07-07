@@ -36,6 +36,11 @@ public class HelloController {
         return "Hello " + name + "!";
     }
 
+    @GetMapping("/square/{n}")
+    public int square( @PathVariable int n){
+        return (n * n);
+    }
+
 
 
 }
