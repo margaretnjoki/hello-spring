@@ -13,10 +13,10 @@ public class HelloController {
         return "Hello, Spring Boot!";
     }
 
-    @GetMapping("/greet/{name}")
-    public String greet(@PathVariable String name){
-        return "Hello " + name + "!";
-    }
+//    @GetMapping("/greet/{name}")
+//    public String greet(@PathVariable String name){
+//        return "Hello " + name + "!";
+//    }
 
     @GetMapping("/add")
     public String add(@RequestParam int a, @RequestParam int b){
@@ -31,9 +31,9 @@ public class HelloController {
     public String health(){
         return "OK";
     }
-
-//    public String greet(String name){
-//        return ""
+        @GetMapping("/greet/{name}")
+    public String greet(@PathVariable String name){
+        return "Hello " + name + "!";
     }
 
 
