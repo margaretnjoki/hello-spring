@@ -22,4 +22,11 @@ public class HelloController {
     public String add(@RequestParam int a, @RequestParam int b){
         return "SUM = " + (a + b) ;
     }
+    @GetMapping("/about")
+    public String about(){
+        return "this app is about learning Spring";
+    }
+
+
+
 }
