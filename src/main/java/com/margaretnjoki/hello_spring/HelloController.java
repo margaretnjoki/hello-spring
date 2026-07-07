@@ -41,6 +41,11 @@ public class HelloController {
         return (n * n);
     }
 
+    @GetMapping("/multiply")
+    public int multiply( @RequestParam int a, @RequestParam int b){
+        return (a * b);
+    }
+
 
 
 }
