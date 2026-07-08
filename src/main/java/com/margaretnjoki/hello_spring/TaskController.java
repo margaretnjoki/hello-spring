@@ -10,7 +10,6 @@ import java.util.*;
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
-
     private final Map<UUID,Task> tasks=new HashMap<>();
 
     @GetMapping
@@ -32,6 +31,12 @@ public class TaskController {
        tasks.put(task.id(),task);
        return ResponseEntity.status(HttpStatus.CREATED).body(task);
     }
+    @GetMapping("/count")
+   public Map<String, Integer>count(){
+        Map<String, Integer> counts=new HashMap<>();
+        counts.put("count", tasks.size());
+        return counts;
+   }
 
-    
+
 }
