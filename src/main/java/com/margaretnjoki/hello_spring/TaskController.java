@@ -38,5 +38,16 @@ public class TaskController {
         return counts;
    }
 
+//    @PutMapping("/{id}")
+//    public ResponseEntity<Task> markDone(@PathVariable UUID id) {
+//        Task existing = tasks.get(id);
+//        if (existing == null) {
+//            return ResponseEntity.notFound().build();
+//        }
+//        Task updated = new Task(existing.id(), existing.title(), true, existing.createdAt());
+//        tasks.put(id, updated);
+//        return ResponseEntity.ok(updated);
+//    }
+//
 
 }
